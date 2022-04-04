@@ -1,0 +1,26 @@
+<html>
+<head>
+     <title>STROKE DIAGNOSIS</title>
+</head>
+<body>
+       <h3>ENTER THE INFO TO GET STROKE DIAGNOSIS</h3>
+       <br><br>
+       <form action="/prediction" method="post">
+           GLUCOSE:<input name="avg_level_glucose" type="number" placeholder="enter the glucose level">
+           <br>
+           <br>
+           BMI:<input name="bmi" type="number" placeholder="enter your BMI">
+           <br>
+           <br>
+           AGE:=<input name="age" type="number" placeholder="enter your AGE">
+
+        
+           <br><br>
+           <input type="submit">
+       </form>
+
+       <b> Prediction:</b> {{output_prediction}}
+       <br>
+       <b> probability:</b>{{output_proba}}
+</body>
+</html>
