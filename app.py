@@ -3,14 +3,14 @@ import pickle
 import numpy as np
 
 
-app2=Flask("app2")
+app=Flask("app")
 loaded_model=pickle.load(open("Model.pkl","rb"))
 
-@app2.route("/")
+@app.route("/")
 def home():
-    return render_template("html of app2.html")
+    return render_template("html of app.html")
 
-@app2.route("/prediction", methods=["POST"])
+@app.route("/prediction", methods=["POST"])
 def predict():
     glucose= request.form["glucose"]
     bmi= request.form["bmi"]
@@ -31,4 +31,4 @@ def predict():
     return render_template("html of app2.html", output_prediction=output,output_proba=probability)
 
 if __name__=="__main__" :
-    app2.run(debug=True)
+    app.run(debug=True)
