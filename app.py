@@ -28,7 +28,7 @@ def predict():
         output="IT'S A STROKE"
 
     print(prediction,probability)
-    return render_template("html of app2.html", output_prediction=output,output_proba=probability)
+    return render_template("html of app.html", output_prediction=output,output_proba=probability)
 
 if __name__=="__main__" :
     app.run(debug=True)
